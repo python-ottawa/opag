@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load markup %}
+{% load main_extras %}
+
+{% block content %}
+    <p>
+        <img src="/media/images/w.png" width="33" height="23" valign="center"
+        alt="W" />elcome to the home of the Ottawa Python Authors Group!
+    </p>
+    <p>
+        This is a group devoted to learning, using and providing resources for
+        the programming language Python (click on the Python image on the
+        top-left of this page for the Python Homepage). OPAG also serves as a
+        general gathering place for Python programmers from the <a
+        href="http://www.ottawa.com">Ottawa region</a> and beyond.
+    </p>
+    <p>
+        We maintain an active <a
+        href="https://lists.sourceforge.net/lists/listinfo/opag-general">mailing
+        list</a> and an <a href="irc://irc.oftc.net/#opag">IRC channel</a>
+        (irc.oftc.net, #opag), for our discussions, and we meet once a month,
+        typically at Carleton University, but we've been known to venture out
+        into the real world from time to time as well.
+    </p>
+    <p>
+        This group was formed by local volunteers who wished to share and
+        expand their knowledge of Python, to the end of benefitting all
+        members (we're just really nice that way). All OPAG resources are
+        created and maintained by member volunteers.
+    </p>
+    <hr>
+    <img src="/media/images/news.png" width="150" height="40" alt="News" />
+<h2>Latest news</h2>
+<table class="newstable">
+{% for article in top3_articles %}
+{% display_article article.id "whitesmoke,darkgrey" forloop.counter0 "40" %}
+{% endfor %}
+</table>
+    <table width="90%" border="0">
+        <tr>
+          <td align="left">
+            <a href="admin/main/newsarticle/add/"><img
+                src="/media/images/submit_article.png" width="104" height="16" border="0" /></a>
+          </td>
+          <td align="right">
+            <a href="news/"><img src="/media/images/archived_news.png" width="106" height="17" border="0" /></a>
+          </td>
+        </tr>
+    </table>
+    <hr>
+    <!-- FIXME: rss feed is http://www.python.org/channews.rdf
+                lets aggregate it
+    <img src="/media/images/announcements.png" width="309" height="38" alt="Announcements" />
+    -->
+{% endblock %}

@@ -1,0 +1,35 @@
+<td valign="top" width="150">
+    <!-- Put the left side menu here. -->
+    <table width="100%">
+        <tr>
+            <td align="center">
+                <a 
+                    href="http://www.python.org"><img 
+                    src="/media/images/python-powered-w-140x56.png" 
+                    width="140" 
+                    height="56" 
+                    border=0 
+                    alt="python.org"></a>
+            </td>
+        </tr>
+    </table>
+    <br />
+
+    {% for section in menu %}
+    <img src="/media/images/{{ section.image }}"
+         alt="{{ section.title }}" /><br /><br />
+    <table>
+        {% for item in section.data %}
+        <tr valign="center">
+            <td>
+                <img src="/media/images/rarrow.png" valign="center" />
+            </td>
+            <td>
+                <a href="{{ item.link }}">{{ item.title }}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br />
+    {% endfor %}
+</td>

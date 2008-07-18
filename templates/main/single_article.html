@@ -1,0 +1,17 @@
+{% load markup %}
+<tr>
+    <td style="background: {{ bg }};" class="newscell">
+        <p class="newsheader">{{ article.title }}</p>
+        <p class="newsdate">{{ article.submitted_date.ctime }}</p>
+        <p class="newscontent">
+        {% if limit %}
+            {{ article.content|truncatewords_html:limit|markdown }}
+        {% else %}
+            {{ article.content|markdown }}
+        {% endif %}
+        </p>
+        {% if limit %}
+        <a href="{% url opag.main.views.news_article article.id %}">Go to article</a>
+        {% endif %}
+    </td>
+</tr>

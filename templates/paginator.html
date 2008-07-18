@@ -1,0 +1,37 @@
+{% if paginator.is_paginated %}
+    {% ifnotequal paginator.current_page 1 %}
+        <a class="pagination" href="{{ paginator.first_url }}">First</a>
+    {% else %}
+        <span class="pagination disabled">First</a>
+    {% endifnotequal %}
+
+    {% if paginator.prev_enabled %}
+        <a class="pagination" href="{{ paginator.prev_url }}">Previous</a>
+    {% else %}
+        <span class="pagination disabled">Previous</a>
+    {% endif %}
+
+    {% for p in paginator.page_numbers %}
+        {% ifequal paginator.current_page p.page %}
+            <span class="pagination current">{{ p.page }}</span>
+        {% else %}
+            <a href="{{ p.url }}">{{ p.page }}</a>
+        {% endifequal %}
+    {% endfor %}
+
+    of {{ paginator.pages }}
+
+    {% if paginator.next_enabled %}
+        <a class="pagination" href="{{ paginator.next_url }}">Next</a>
+    {% else %}
+        <span class="pagination disabled">Next</a>
+    {% endif %}
+
+    {% ifnotequal paginator.current_page paginator.pages %}
+        <a class="pagination" href="{{ paginator.last_url }}">Last</a>
+    {% else %}
+        <span class="pagination disabled">Last</a>
+    {% endifnotequal %}
+
+    <br>
+{% endif %}

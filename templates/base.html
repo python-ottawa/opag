@@ -1,0 +1,65 @@
+{% load common %}
+
+{% init_rootpath %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+    <head>
+        <title>OPAG: The Ottawa Python Authors Group</title>
+        <link href="/media/styles/default.css" name="default" type="text/css" rel="stylesheet" />
+        <meta name="description" content="This is a group devoted to learning, using and providing resources for the programming language Python." />
+        <meta name="keywords" content="Python, Programming, Scripting Language, Open Source Software, Free Software, Unix, Computer, Ottawa, Canada" />
+    </head>
+
+    <body bgcolor="#ffffff">
+
+        <!-- Start of the page structure. -->
+        <table align="center" width="100%">
+            <tr>
+                <td colspan="5">
+                    <center>
+                        <a href="{{rootpath}}"><img border="0"
+                            src="/media/images/logo6.png" width="816"
+                            height="65" alt="Ottawa Python Author's
+                            Group"></a>
+                    </center>
+                </td>
+            </tr>
+
+
+            <!-- This is the blue line across the top. -->
+            <tr>
+                <td bgcolor="#134699" height="10" colspan="5">&nbsp;</td>
+            </tr>
+            <!-- Everything beneath the line goes here. -->
+            <tr>
+
+                {% left_menu %}
+
+                <!-- The dividing vertical line. -->
+                <td valign="top">
+                    <img src="/media/images/vline.png" />
+                </td>
+                <td valign="top">
+
+                    <!-- The navigational bar, showing current location. -->
+                    <h6>Current Location: {{ bctrail }}</h6>
+
+                    <!-- Put the page content here. -->
+                    {% block content %}
+                    Under construction.
+                    {% endblock %}
+
+                    <!-- common footer -->
+                </td>
+                <!-- The dividing vertical line. -->
+                <td valign="top">
+                    <img src="/media/images/vline.png" width="14" height="490" />
+                </td>
+
+                {% right_menu %}
+
+            </tr>
+        </table>
+    </body>
+</html>

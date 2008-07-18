@@ -1,0 +1,133 @@
+body {
+    font-family: arial, verdana, sans-serif;
+    color: navy;
+    font-size: 0.9em;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: navy
+}
+
+h2 {
+    font-size: 1.4em;
+    color: navy
+}
+
+h3 {
+    font-size: 1.3em;
+    color: navy
+}
+
+h4 {
+    font-size: 1.2em;
+    color: navy
+}
+
+h5 {
+    font-size: 1.1em;
+    color: navy
+}
+
+h6 {
+    font-size: 1.0em;
+    color: navy
+}
+
+.h6vspaced {
+    font-size: 1.0em;
+    font-weight: bold;
+    color: navy;
+    line-height: 30px
+}
+
+p {
+    color: #333333;
+}
+
+a:link {
+    color: navy
+}
+ 
+a:visited {
+    color: navy
+}
+
+ul li, ol li, ul, td, td .forms, td .forms td, .forms {
+    color: #333333;
+}
+
+.small {
+    font-size: 0.8em;
+    color: #333333;
+}
+
+.newscell {
+    /* border: 2px ridge navy; */
+    padding: 5px;
+}
+
+.newsheader {
+    color: darkred;
+    font-weight: bold;
+}
+
+.newsdate {
+    color: navy;
+    font-style: italic;
+}
+
+.newscontent {
+    color: black;
+    font-style: normal;
+}
+
+.newstable {
+    width: 100%;
+}
+
+.meeting {
+    /* border: 1px solid navy; */
+    padding: 5px;
+    margin: 5px;
+    background: whitesmoke;
+    width: 100%;
+}
+
+.meetingdetails {
+    background: whitesmoke;
+}
+
+.meetingheader {
+    background: lightgray;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.meetingdate {
+    color: darkred;
+}
+
+.meetinglocation {
+    color: navy;
+}
+
+.meetingnote {
+    font-style: italic;
+}
+
+.talkheader {
+    font-weight: bold;
+}
+
+.talk {
+    /* border: 2px solid navy; */
+    padding: 5px;
+    background: whitesmoke;
+    width: 100%;
+}
+
+.talkdetails {
+    background: whitesmoke;
+}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load markup %}
+{% load main_extras %}
+
+{% block content %}
+
+<table class="newstable">
+{% for article in articles %}
+{% display_article article.id "whitesmoke,darkgrey" forloop.counter0 "40" %}
+{% endfor %}
+</table>
+
+{% include "paginator.html" %}
+
+{% endblock %}

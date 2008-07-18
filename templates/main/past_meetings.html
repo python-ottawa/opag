@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load markup %}
+
+<!-- FIXME - need to factor this template out, as it's shared with the
+meetings page. -->
+
+{% block content %}
+
+<p><img src="/media/images/s.png" width="31" height="29" valign="center"
+alt="S" />hown here are the previous OPAG meeting details. If speakers
+provided links to any resources from their talks, then they are located
+here.</p>
+
+{% for meeting in meetings %}
+<table class="meeting">
+    <!-- FIXME: maybe some logic here on whether the meeting has
+                already taken place, based on the date.
+         FIXME: link to the next meeting?
+         -->
+    <tr>
+        <td class="meetingheader">{{ meeting.human_month }} OPAG meeting</td>
+    </tr>
+    <tr>
+        <td class="meetingdate">
+            {{ meeting.human_datetime }}
+        </td>
+    </tr>
+    <tr>
+        <td class="meetinglocation">
+            Location: {{ meeting.location }}
+            {% if meeting.locationurl %}
+            ( <a href="{{ meeting.locationurl }}">map</a> )
+            {% endif %}
+        </td>
+    </tr>
+
+    {% if meeting.details %}
+    <tr><td class="meetingdetails">{{ meeting.details|markdown }}</td></tr>
+    {% endif %}
+
+    <tr><td>&nbsp;</td></tr>
+
+    {% if meeting.meetingtalk_set.all %}
+    <tr><td class="talkheader">Talks planned:</td></tr>
+    {% endif %}
+
+    {% for talk in meeting.meetingtalk_set.all %}
+    <tr>
+        <td>
+            <table class="talk">
+                <tr><td>Topic: {{ talk.topic }}</td></tr>
+                <tr><td>Speaker: {{ talk.name }}</td></tr>
+                <tr>
+                    <td class="talkdetails">
+                        {{ talk.details|markdown }}
+                    </td>
+                </tr>
+                {% if talk.url %}
+                <tr>
+                    <td>
+                        <a href="{{ talk.url }}">More information</a>
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </td>
+    </tr>
+    {% endfor %}
+
+    <!-- meeting notes -->
+    {% if not meeting.firm %}
+    <tr><td class="meetingnote">This meeting is still tentative.</td></tr>
+    {% endif %}
+
+    {% if meeting.speakers_wanted %}
+    <tr><td class="meetingnote">Speakers are still needed for this meeting.</td></tr>
+    {% endif %}
+</table>
+{% endfor %}
+{% endblock %}
