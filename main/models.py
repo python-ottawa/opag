@@ -25,9 +25,14 @@ class NewsArticle(models.Model):
 class Meeting(models.Model):
     """This class captures the details of a meeting."""
     date = models.DateTimeField('the date of the meeting')
-    location = models.CharField('the meeting location', maxlength=255)
-    locationurl = models.URLField('a map link for the location',
-                                  blank=True)
+    location = models.CharField(
+        'the meeting location',
+        default="3444 ME at Carleton University",
+        maxlength=255)
+    locationurl = models.URLField(
+        'a map link for the location',
+        default="http://tinyurl.com/2dnrgl",
+        blank=True)
     details = models.TextField('the meeting details', blank=True)
     firm = models.BooleanField('is the meeting firm?', default=False)
     speakers_wanted = models.BooleanField('are speakers still wanted?',
