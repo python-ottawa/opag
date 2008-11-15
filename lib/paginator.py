@@ -1,10 +1,10 @@
-from django.core.paginator import ObjectPaginator, InvalidPage
+from django.core.paginator import Paginator, InvalidPage
 from django.http import Http404
 
-class Paginator(ObjectPaginator):
+class OpagPaginator(Paginator):
     def __init__(self, request=None, query_set=None, current_page=1, page_size=20, padding=3 ):
         from re import sub
-        ObjectPaginator.__init__(self, query_set, page_size)
+        Paginator.__init__(self, query_set, page_size)
         if request is None or query_set is None:
             raise Http404
         self.path = sub( r'page/\d+/?$', '', request.path )
@@ -41,8 +41,8 @@ class Paginator(ObjectPaginator):
     def get_page(self, page_num=None):
         try:
             if page_num is None:
-                return ObjectPaginator.get_page(self, self.current_page-1)
+                return Paginator.get_page(self, self.current_page-1)
             else:
-                return ObjectPaginator.get_page(self, page_num-1)
+                return Paginator.get_page(self, page_num-1)
         except InvalidPage:
             raise Http404

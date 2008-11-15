@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.http import Http404
 from opag.main.models import *
 from opag.lib.shared import make_bctrail
-from opag.lib.paginator import Paginator
+from opag.lib.paginator import OpagPaginator
 from datetime import date
 from time import time
 
@@ -109,7 +109,7 @@ def news_all(request, page=1):
     """This function displays the interface to all news in the database."""
     page = int(page)
     bctrail = make_bctrail(['Home', '/', 'All news'])
-    paginator = Paginator(request, published_articles, page, page_size=10)
+    paginator = OpagPaginator(request, published_articles, page, page_size=10)
     articles = paginator.get_page(page)
     return render_to_response('main/news_all.html',
         RequestContext(request, {

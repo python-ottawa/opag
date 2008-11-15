@@ -9,10 +9,10 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'sqlite3'           # 'postgresql', 'mysql', 'sqlite3' or 'ado_mssql'.
-DATABASE_NAME = 'db.sqlite3'             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
+DATABASE_ENGINE = 'mysql'           # 'postgresql', 'mysql', 'sqlite3' or 'ado_mssql'.
+DATABASE_NAME = 'opag'             # Or path to database file if using sqlite3.
+DATABASE_USER = 'opag'             # Not used with sqlite3.
+DATABASE_PASSWORD = '7qtuGKWa0YmrVaqEM8S'         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
@@ -41,7 +41,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/adminmedia/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'cuo-(3^fg*-mj1&c)0_y_s2@1*4eo2s5u7ox#^^j=*vs_!aolf'
+SECRET_KEY = '8vS4MNWy674VJidmPg6UAf50niO7Kr6Gqvuz2bWRfUaJZz5SQUTQGdegzVpIXJQ'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -62,14 +62,7 @@ ROOT_URLCONF = 'opag.urls'
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
     # Always use forward slashes, even on Windows.
-    "templates"
-)
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.request',
+    "/usr/local/www/opag/templates"
 )
 
 INSTALLED_APPS = (

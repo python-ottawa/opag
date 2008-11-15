@@ -6,9 +6,9 @@ class NewsArticle(models.Model):
     will appear in a queue that can be viewed by the site administrator, after
     which it can be reviewed, edited, and then posted to the front page."""
     approved = models.BooleanField('approval status', default=False)
-    author_name = models.CharField('name of the author', maxlength=100)
+    author_name = models.CharField('name of the author', max_length=100)
     author_email = models.EmailField("author's email address")
-    title = models.CharField('article title', maxlength=100)
+    title = models.CharField('article title', max_length=100)
     content = models.TextField("the content of the post")
     submitted_date = models.DateTimeField('submission date', 
                                           auto_now_add=True)
@@ -28,7 +28,7 @@ class Meeting(models.Model):
     location = models.CharField(
         'the meeting location',
         default="3444 ME at Carleton University",
-        maxlength=255)
+        max_length=255)
     locationurl = models.URLField(
         'a map link for the location',
         default="http://tinyurl.com/2dnrgl",
@@ -52,20 +52,17 @@ class Meeting(models.Model):
 
 class MeetingTalk(models.Model):
     """This class captures a topic being discussed at a meeting."""
-    meeting = models.ForeignKey(Meeting,
-                                edit_inline=models.STACKED,
-                                num_in_admin=2)
+    #meeting = models.ForeignKey(Meeting,
+    #                            edit_inline=models.STACKED,
+    #                            num_in_admin=2)
+    meeting = models.ForeignKey(Meeting)
     name = models.CharField('the name of the speaker',
-                            maxlength=100,
-                            core=True)
+                            max_length=100)
     topic = models.CharField('the topic of the talk',
-                             maxlength=255,
-                             core=True)
-    details = models.TextField('the talk details',
-                               core=True)
+                             max_length=255)
+    details = models.TextField('the talk details')
     url = models.URLField('a link to more information',
-                          blank=True,
-                          core=False)
+                          blank=True)
 
     def __str__(self):
         return self.topic
@@ -75,10 +72,10 @@ class MeetingTalk(models.Model):
 
 class Article(models.Model):
     """This class represents a written article."""
-    author = models.CharField('The article author', maxlength=64)
+    author = models.CharField('The article author', max_length=64)
     author_email = models.EmailField("The author's email address")
     date = models.DateTimeField()
-    title = models.CharField('The article title', maxlength=128)
+    title = models.CharField('The article title', max_length=128)
     contents = models.TextField('The article, in markdown format')
 
     def __str__(self):
