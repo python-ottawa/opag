@@ -43,7 +43,7 @@
                 <td valign="top">
 
                     <!-- The navigational bar, showing current location. -->
-                    <h6>Current Location: {{ bctrail }}</h6>
+                    <h6>Current Location: {{ bctrail|safe }}</h6>
 
                     <!-- Put the page content here. -->
                     {% block content %}

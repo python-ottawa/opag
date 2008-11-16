@@ -5,7 +5,7 @@
 {% block content %}
 
 <table class="newstable">
-{% for article in articles %}
+{% for article in page.object_list %}
 {% display_article article.id "whitesmoke,darkgrey" forloop.counter0 "40" %}
 {% endfor %}
 </table>

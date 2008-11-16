@@ -14,16 +14,16 @@ class OpagPaginator(Paginator):
             self.query_str = ''
         self.current_page = int( current_page )
         self.page_size = page_size
-        start = self.current_page-1 - padding
-        end = self.current_page-1 + padding
+        start = self.current_page - padding
+        end = self.current_page + padding
         if start < 0:
             end += 0 - start
             start = 0
-            if end >= self.pages:
-                end = self.pages-1
-        if end >= self.pages:
-            start -= end - self.pages + 1
-            end = self.pages-1
+            if end >= self.num_pages:
+                end = self.num_pages-1
+        if end >= self.num_pages:
+            start -= end - self.num_pages + 1
+            end = self.num_pages-1
             if start < 0:
                 start = 0
         self.first = start+1
@@ -35,14 +35,14 @@ class OpagPaginator(Paginator):
         self.prev_url = self.path + '/page/' + str( self.current_page - 1 ) + '/' + self.query_str
         self.next_enabled = int( current_page ) < int( self.last )
         self.next_url = self.path + '/page/' + str( self.current_page + 1 ) + '/' + self.query_str
-        self.last_url = self.path + '/page/' + str( self.pages ) + '/' + self.query_str
-        self.is_paginated = self.pages > 1
+        self.last_url = self.path + '/page/' + str( self.num_pages ) + '/' + self.query_str
+        self.is_paginated = self.num_pages > 1
 
     def get_page(self, page_num=None):
         try:
             if page_num is None:
-                return Paginator.get_page(self, self.current_page-1)
+                return Paginator.page(self, self.current_page)
             else:
-                return Paginator.get_page(self, page_num-1)
+                return Paginator.page(self, page_num)
         except InvalidPage:
-            raise Http404
+            raise Http404, "page_num is %s" % page_num

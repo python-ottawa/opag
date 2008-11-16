@@ -110,13 +110,13 @@ def news_all(request, page=1):
     page = int(page)
     bctrail = make_bctrail(['Home', '/', 'All news'])
     paginator = OpagPaginator(request, published_articles, page, page_size=10)
-    articles = paginator.get_page(page)
+    page = paginator.get_page(page)
     return render_to_response('main/news_all.html',
         RequestContext(request, {
             'top10_articles': top10_articles,
             'paginator': paginator,
             'bctrail': bctrail,
-            'articles': articles
+            'page': page
             }))
 
 def news_article(request, id):
