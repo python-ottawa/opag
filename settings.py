@@ -3,16 +3,19 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+# Default to being in dev mode
+DEVELOPMENT = True
+
 ADMINS = (
     ('Michael P. Soulier', 'msoulier@digitaltorque.ca'),
 )
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'mysql'           # 'postgresql', 'mysql', 'sqlite3' or 'ado_mssql'.
-DATABASE_NAME = 'opag'             # Or path to database file if using sqlite3.
+DATABASE_ENGINE = 'sqlite3'
+DATABASE_NAME = 'db.sqlite3'
 DATABASE_USER = 'opag'             # Not used with sqlite3.
-DATABASE_PASSWORD = '7qtuGKWa0YmrVaqEM8S'         # Not used with sqlite3.
+DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
@@ -62,7 +65,8 @@ ROOT_URLCONF = 'opag.urls'
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
     # Always use forward slashes, even on Windows.
-    "/usr/local/www/opag/templates"
+    #"/usr/local/www/opag/templates"
+    "templates"
 )
 
 INSTALLED_APPS = (
@@ -75,3 +79,16 @@ INSTALLED_APPS = (
     'opag.main',
     'opag.lib',
 )
+
+# Look for a local settings file.
+import os, sys
+local_settings = False
+if os.path.exists('./settings.local.py'):
+    sys.path.append('.')
+    local_settings = True
+elif os.path.exists('/var/www/opag/settings.local.py'):
+    sys.path.append('/var/www/opag')
+    local_settings = True
+
+if local_settings:
+    from settings.local import *
