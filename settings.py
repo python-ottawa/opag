@@ -69,6 +69,13 @@ TEMPLATE_DIRS = (
     "templates"
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,13 +89,6 @@ INSTALLED_APPS = (
 
 # Look for a local settings file.
 import os, sys
-local_settings = False
-if os.path.exists('./settings.local.py'):
-    sys.path.append('.')
-    local_settings = True
-elif os.path.exists('/var/www/opag/settings.local.py'):
+if os.path.exists('/var/www/opag/settings_local.py'):
     sys.path.append('/var/www/opag')
-    local_settings = True
-
-if local_settings:
-    from settings.local import *
+    from settings_local import *
