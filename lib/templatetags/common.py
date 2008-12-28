@@ -42,7 +42,7 @@ def left_menu():
     resources = [
         {
             'title': 'OPAG Wiki',
-            'link': 'http://backup.opag.ca/wiki/'
+            'link': rootpath + 'wiki/'
         }
     ]
 
