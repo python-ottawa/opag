@@ -30,10 +30,6 @@ def left_menu():
             'link': rootpath + 'membership/'
         },
         {
-            'title': 'Meeting Information',
-            'link': rootpath + 'meetings/'
-        },
-        {
             'title': 'About the Website',
             'link': rootpath + 'aboutsite/'
         }
@@ -43,13 +39,6 @@ def left_menu():
         {
             'title': 'OPAG Wiki',
             'link': rootpath + 'wiki/'
-        }
-    ]
-
-    documentation = [
-        {
-            'title': 'Articles',
-            'link': rootpath + 'articles/'
         },
         {
             'title': 'Contact Us',
@@ -67,11 +56,6 @@ def left_menu():
             'title': 'Resources',
             'image': 'resources.png',
             'data': resources
-        },
-        {
-            'title': 'Documentation',
-            'image': 'documentation.png',
-            'data': documentation
         }
     ]
     return { 'menu': menu }
@@ -89,10 +73,6 @@ def right_menu(context):
             'link': 'http://www.diveintopython.org/'
         },
         {
-            'title': 'Python 2.4 quick reference',
-            'link': 'http://rgruet.free.fr/PQR24/PQR2.4.html'
-        },
-        {
             'title': 'Python 2.5 quick reference',
             'link': 'http://rgruet.free.fr/PQR25/PQR2.5.html'
         },
@@ -101,7 +81,7 @@ def right_menu(context):
             'link': 'http://aspn.activestate.com/ASPN/Downloads/ActivePython/'
         },
         {
-            'title': "Mike Soulier's Homepage",
+            'title': 'Digital Torque Consulting Inc.',
             'link': 'http://digitaltorque.ca/'
         },
         {
@@ -110,5 +90,4 @@ def right_menu(context):
         }
     ]
     return { 'quicklinks': quick_links,
-             'top10_articles': context.get('top10_articles', []),
              'rootpath': rootpath }

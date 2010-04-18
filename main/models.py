@@ -1,26 +1,17 @@
 from django.db import models
 from datetime import datetime
 
-class NewsArticle(models.Model):
-    """This class captures a news posting or submission. Initially the post
-    will appear in a queue that can be viewed by the site administrator, after
-    which it can be reviewed, edited, and then posted to the front page."""
-    approved = models.BooleanField('approval status', default=False)
-    author_name = models.CharField('name of the author', max_length=100)
-    author_email = models.EmailField("author's email address")
-    title = models.CharField('article title', max_length=100)
+class Notice(models.Model):
+    """This model class captures a notice for the front page. We can have
+    multiple notices, but typically we should have one, or none."""
+    visible = models.BooleanField('visible', default=True)
+    title = models.CharField('title', max_length=100)
     content = models.TextField("the content of the post")
     submitted_date = models.DateTimeField('submission date', 
                                           auto_now_add=True)
-    modified_date = models.DateTimeField('date/time last modified',
-                                         auto_now=True)
 
     def __str__(self):
         return self.title
-
-    class Admin:
-        list_display = ('title', 'submitted_date', 'approved')
-        list_filter = ['approved']
 
 class Meeting(models.Model):
     """This class captures the details of a meeting."""
@@ -37,24 +28,11 @@ class Meeting(models.Model):
     firm = models.BooleanField('is the meeting firm?', default=False)
     speakers_wanted = models.BooleanField('are speakers still wanted?',
                                           default=True)
-
     def __str__(self):
         return str(self.date)
 
-    class Admin:
-        list_display = ('date', 'location', 'firm', 'speakers_wanted')
-        list_filter = ['date']
-        date_hierarchy = 'date'
-        #fields = (
-        #        ('Meeting details',
-        #            {'fields': ('date', 'location', 'details')}),
-        #        )
-
 class MeetingTalk(models.Model):
     """This class captures a topic being discussed at a meeting."""
-    #meeting = models.ForeignKey(Meeting,
-    #                            edit_inline=models.STACKED,
-    #                            num_in_admin=2)
     meeting = models.ForeignKey(Meeting)
     name = models.CharField('the name of the speaker',
                             max_length=100)
@@ -67,9 +45,6 @@ class MeetingTalk(models.Model):
     def __str__(self):
         return self.topic
 
-    class Admin:
-        list_display = ('name', 'topic', 'meeting')
-
 class Article(models.Model):
     """This class represents a written article."""
     author = models.CharField('The article author', max_length=64)
@@ -80,6 +55,3 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
-
-    class Admin:
-        list_display = ('title', 'author')

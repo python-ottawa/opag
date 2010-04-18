@@ -22,34 +22,14 @@
         typically at Carleton University, but we've been known to venture out
         into the real world from time to time as well.
     </p>
-    <p>
-        This group was formed by local volunteers who wished to share and
-        expand their knowledge of Python, to the end of benefitting all
-        members (we're just really nice that way). All OPAG resources are
-        created and maintained by member volunteers.
-    </p>
     <hr>
-    <img src="/media/images/news.png" width="150" height="40" alt="News" />
-<h2>Latest news</h2>
-<table class="newstable">
-{% for article in top3_articles %}
-{% display_article article.id "whitesmoke,darkgrey" forloop.counter0 "40" %}
-{% endfor %}
-</table>
-    <table width="90%" border="0">
-        <tr>
-          <td align="left">
-            <a href="admin/main/newsarticle/add/"><img
-                src="/media/images/submit_article.png" width="104" height="16" border="0" /></a>
-          </td>
-          <td align="right">
-            <a href="news/"><img src="/media/images/archived_news.png" width="106" height="17" border="0" /></a>
-          </td>
+    <h2>Upcoming Meetings</h2>
+    <table class="meetings_table">
+    {% for meeting in meetings %}
+        <tr class="meeting_row">
+            <td style="text-align: right">Date</td>
+            <td style="text-align: left">{{ meeting.date }}</td>
         </tr>
+    {% endfor %}
     </table>
-    <hr>
-    <!-- FIXME: rss feed is http://www.python.org/channews.rdf
-                lets aggregate it
-    <img src="/media/images/announcements.png" width="309" height="38" alt="Announcements" />
-    -->
 {% endblock %}

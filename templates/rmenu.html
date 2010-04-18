@@ -33,23 +33,6 @@
         {% endfor %}
     </table>
     <br />
-    <img src="/media/images/archived.png" width="150" height="40" alt="Archived News" />
-    <br clear="all" />
-    <!-- top 10 article links -->
-    <table>
-        {% for article in top10_articles %}
-        <tr valign="center">
-            <td>
-                <img src="/media/images/rarrow.png" width="9" height="10" valign="center" />
-            </td>
-            <td>
-                <a href="{{rootpath}}news/article/{{ article.id }}/">{{ article.title }}</a>
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
-    <br clear="all" />
-    <p><a href="{{rootpath}}news/">Full archive</a></p>
     <p><a href="{{rootpath}}admin/">Admin</a></p>
     </p>
 </td>
