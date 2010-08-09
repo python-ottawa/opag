@@ -34,6 +34,10 @@ def left_menu():
             'link': rootpath + 'aboutsite/'
         },
         {
+            'title': 'Financials',
+            'link': rootpath + 'financials/'
+        },
+        {
             'title': 'Contact Us',
             'link': rootpath + 'contactus/'
         }

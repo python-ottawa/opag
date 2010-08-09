@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% load markup %}
+{% load main_extras %}
+
+{% block content %}
+    {{ flatpage.content|markdown }}
+{% endblock %}
