@@ -8,7 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # To serve static content in development.
     # Admin access
-    (r'^admin/(.*)', admin.site.root),
+    (r'^admin/(.*)', include(admin.site.urls)),
     # Default handler is the main app.
     (r'', include('opag.main.urls'))
 )

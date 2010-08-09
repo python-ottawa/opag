@@ -25,8 +25,8 @@ class Meeting(models.Model):
         default="http://tinyurl.com/2dnrgl",
         blank=True)
     details = models.TextField('the meeting details', blank=True)
-    firm = models.BooleanField('is the meeting firm?', default=False)
-    speakers_wanted = models.BooleanField('are speakers still wanted?',
+    firm = models.BooleanField('the meeting is firm', default=False)
+    speakers_wanted = models.BooleanField('speakers are still wanted',
                                           default=True)
     def __str__(self):
         return str(self.date)

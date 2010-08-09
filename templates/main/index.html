@@ -26,9 +26,47 @@
     <h2>Upcoming Meetings</h2>
     <table class="meetings_table">
     {% for meeting in meetings %}
-        <tr class="meeting_row">
-            <td style="text-align: right">Date</td>
-            <td style="text-align: left">{{ meeting.date }}</td>
+        <tr>
+            <td class="meetings_header">Date:</td>
+            <td class="meetings_value">{{ meeting.date }}</td>
+        </tr>
+        <tr>
+            <td class="meetings_header">Location:</td>
+            <td class="meetings_value">
+                {% if meeting.locationurl %}
+                <a href="{{ meeting.locationurl }}">{{ meeting.location }}</a>
+                {% else %}
+                {{ meeting.location }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="meetings_header">Details:</td>
+            <td class="meetings_value">
+                {{ meeting.details }}
+            </td>
+        </tr>
+        <tr>
+            <td class="meetings_header">Meeting firm:</td>
+            <td class="meetings_value">
+                {% if meeting.firm %}
+                Meeting confirmed, hope to see you there.
+                {% else %}
+                Still tentative, need to confirm details.
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                {% if meeting.speakers_wanted %}
+                Note: We are still looking for additional speakers for this
+                meeting. Please <a href="/contactus/">contact us</a> if you
+                would like to share something with us.
+                {% endif %}
+            </td>
+        </tr>
+        <tr class="meeting_break">
+            <td colspan="2">&nbsp;</td>
         </tr>
     {% endfor %}
     </table>

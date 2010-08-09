@@ -32,13 +32,6 @@ def left_menu():
         {
             'title': 'About the Website',
             'link': rootpath + 'aboutsite/'
-        }
-    ]
-
-    resources = [
-        {
-            'title': 'OPAG Wiki',
-            'link': rootpath + 'wiki/'
         },
         {
             'title': 'Contact Us',
@@ -51,11 +44,6 @@ def left_menu():
             'title': 'Club Information',
             'image': 'club_information.png',
             'data': club_info
-        },
-        {
-            'title': 'Resources',
-            'image': 'resources.png',
-            'data': resources
         }
     ]
     return { 'menu': menu }
@@ -67,18 +55,6 @@ def right_menu(context):
         {
             'title': 'The Python Homepage',
             'link': 'http://www.python.org/'
-        },
-        {
-            'title': 'Dive Into Python',
-            'link': 'http://www.diveintopython.org/'
-        },
-        {
-            'title': 'Python 2.5 quick reference',
-            'link': 'http://rgruet.free.fr/PQR25/PQR2.5.html'
-        },
-        {
-            'title': 'ActivePython',
-            'link': 'http://aspn.activestate.com/ASPN/Downloads/ActivePython/'
         },
         {
             'title': 'Digital Torque Consulting Inc.',
