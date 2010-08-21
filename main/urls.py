@@ -1,11 +1,9 @@
-from django.conf.urls.defaults import *
+from django.conf.urls.defaults import patterns, url
 
-urlpatterns = patterns('',
-    (r'membership/$', 'opag.main.views.membership'),
-    (r'aboutsite/$', 'opag.main.views.aboutsite'),
-    (r'past_meetings/$', 'opag.main.views.past_meetings'),
-
-    (r'contactus/$', 'opag.main.views.contactus'),
-
-    (r'^$', 'opag.main.views.index'),
+urlpatterns = patterns('opag.main.views',
+    url(r'membership/$', 'membership'),
+    url(r'aboutsite/$', 'aboutsite'),
+    url(r'past_meetings/$', 'past_meetings', name="past-meetings"),
+    url(r'contactus/$', 'contactus', name="contactus"),
+    url(r'^$', 'index'),
 )

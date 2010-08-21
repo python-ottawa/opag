@@ -11,70 +11,52 @@ alt="S" />hown here are the previous OPAG meeting details. If speakers
 provided links to any resources from their talks, then they are located
 here.</p>
 
-{% for meeting in meetings %}
-<table class="meeting">
-    <!-- FIXME: maybe some logic here on whether the meeting has
-                already taken place, based on the date.
-         FIXME: link to the next meeting?
-         -->
+<!-- FIXME: We really need pagination here -->
+
+<h2>Past Meetings</h2>
+<table class="meetings_table">
+{% if meetings %}
+    {% for meeting in meetings %}
     <tr>
-        <td class="meetingheader">{{ meeting.human_month }} OPAG meeting</td>
+        <td class="meetings_header">Date:</td>
+        <td class="meetings_value">{{ meeting.date }}</td>
     </tr>
     <tr>
-        <td class="meetingdate">
-            {{ meeting.human_datetime }}
-        </td>
-    </tr>
-    <tr>
-        <td class="meetinglocation">
-            Location: {{ meeting.location }}
+        <td class="meetings_header">Location:</td>
+        <td class="meetings_value">
             {% if meeting.locationurl %}
-            ( <a href="{{ meeting.locationurl }}">map</a> )
+            <a href="{{ meeting.locationurl }}">{{ meeting.location }}</a>
+            {% else %}
+            {{ meeting.location }}
             {% endif %}
         </td>
     </tr>
-
-    {% if meeting.details %}
-    <tr><td class="meetingdetails">{{ meeting.details|markdown }}</td></tr>
-    {% endif %}
-
-    <tr><td>&nbsp;</td></tr>
-
-    {% if meeting.meetingtalk_set.all %}
-    <tr><td class="talkheader">Talks planned:</td></tr>
-    {% endif %}
-
-    {% for talk in meeting.meetingtalk_set.all %}
     <tr>
-        <td>
-            <table class="talk">
-                <tr><td>Topic: {{ talk.topic }}</td></tr>
-                <tr><td>Speaker: {{ talk.name }}</td></tr>
-                <tr>
-                    <td class="talkdetails">
-                        {{ talk.details|markdown }}
-                    </td>
-                </tr>
-                {% if talk.url %}
-                <tr>
-                    <td>
-                        <a href="{{ talk.url }}">More information</a>
-                    </td>
-                </tr>
-                {% endif %}
-            </table>
+        <td class="meetings_header">Details:</td>
+        <td class="meetings_value">
+            {{ meeting.details|markdown }}
         </td>
     </tr>
+    <tr>
+        <td class="meetings_header">Talks planned</td>
+        <td class="meetings_value">
+            {% if meeting.talks %}
+            Lets describe the talks here
+            {% else %}
+            There are no talks planned for this meeting yet. Want to help?
+            {% endif %}
+        </td>
+    </tr>
+    <tr class="meeting_break">
+        <td colspan="2">&nbsp;</td>
+    </tr>
     {% endfor %}
-
-    <!-- meeting notes -->
-    {% if not meeting.firm %}
-    <tr><td class="meetingnote">This meeting is still tentative.</td></tr>
-    {% endif %}
-
-    {% if meeting.speakers_wanted %}
-    <tr><td class="meetingnote">Speakers are still needed for this meeting.</td></tr>
-    {% endif %}
+{% else %}
+    <tr>
+        <td>
+            There are no past meetings saved.
+        </td>
+    </tr>
+{% endif %}
 </table>
-{% endfor %}
 {% endblock %}

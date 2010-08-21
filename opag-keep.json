@@ -1,0 +1,521 @@
+[
+    {
+        "fields": {
+            "date": "2007-08-14 19:00:00", 
+            "details": "Our August monthly meeting. ", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "date": "2007-10-09 19:00:00", 
+            "details": "Our October monthly meeting.\r\n\r\n<b><i>Note: This meeting was cancelled.</i></b>", 
+            "firm": 0, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 1
+        }, 
+        "model": "main.meeting", 
+        "pk": 2
+    }, 
+    {
+        "fields": {
+            "date": "2007-11-13 19:00:00", 
+            "details": "Our November monthly meeting", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 4
+    }, 
+    {
+        "fields": {
+            "date": "2007-12-11 19:00:00", 
+            "details": "TBD", 
+            "firm": 0, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 1
+        }, 
+        "model": "main.meeting", 
+        "pk": 5
+    }, 
+    {
+        "fields": {
+            "date": "2008-01-08 19:00:00", 
+            "details": "This will be an open discussion meeting to discuss any topics brought up at meeting time. On the agenda at the moment are:\r\n\r\n * [Mercurial](http://www.selenic.com/mercurial/wiki/)\r\n * [python buildbot](http://www.python.org/dev/buildbot/)\r\n * [rss2email](http://rss2email.infogami.com/)\r\n * [todo.py](http://todotxt.com/)", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 6
+    }, 
+    {
+        "fields": {
+            "date": "2008-02-19 19:00:00", 
+            "details": "This is the standard February meeting for OPAG. ", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 1
+        }, 
+        "model": "main.meeting", 
+        "pk": 7
+    }, 
+    {
+        "fields": {
+            "date": "2008-03-11 19:00:00", 
+            "details": "Meeting canceled, see the [front page](/). ", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 8
+    }, 
+    {
+        "fields": {
+            "date": "2008-04-08 19:00:00", 
+            "details": "Our regular April meeting.", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 9
+    }, 
+    {
+        "fields": {
+            "date": "2008-05-13 19:00:00", 
+            "details": "Our regular May meeting. ", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 10
+    }, 
+    {
+        "fields": {
+            "date": "2008-06-10 19:00:00", 
+            "details": "This meeting has been canceled. We'll try again in July. ", 
+            "firm": 0, 
+            "location": "The usual place", 
+            "locationurl": "", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 11
+    }, 
+    {
+        "fields": {
+            "date": "2008-07-08 19:00:00", 
+            "details": "This meeting has been cancelled. ", 
+            "firm": 0, 
+            "location": "The usual place", 
+            "locationurl": "", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 12
+    }, 
+    {
+        "fields": {
+            "date": "2008-08-12 19:00:00", 
+            "details": "Meeting cancelled, I think everyone is on vacation.", 
+            "firm": 0, 
+            "location": "The usual place", 
+            "locationurl": "", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 13
+    }, 
+    {
+        "fields": {
+            "date": "2008-10-14 19:00:00", 
+            "details": "Our regular October meeting. \r\n\r\nThis month there are no talks planned. We will meet to discuss the upcoming Python 3k (3.0) release. I will build this release on my laptop so we can play with it, and we can go over some of the changes and discuss them. \r\n\r\nThis would also be a good time to go over Python 2.6.\r\n\r\n[New features in Python 2.6](http://docs.python.org/whatsnew/2.6.html)\r\n\r\n[New features in Python 3.0](http://docs.python.org/dev/3.0/whatsnew/3.0.html)", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 14
+    }, 
+    {
+        "fields": {
+            "date": "2008-11-11 19:00:00", 
+            "details": "TBD", 
+            "firm": 0, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 1
+        }, 
+        "model": "main.meeting", 
+        "pk": 15
+    }, 
+    {
+        "fields": {
+            "date": "2008-12-09 19:00:00", 
+            "details": "TBD", 
+            "firm": 0, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 1
+        }, 
+        "model": "main.meeting", 
+        "pk": 16
+    }, 
+    {
+        "fields": {
+            "date": "2009-02-10 19:00:00", 
+            "details": "This meeting is canceled due to inclement weather and lack of material. \r\n\r\nYes, I know. We're working on it.", 
+            "firm": 0, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 1
+        }, 
+        "model": "main.meeting", 
+        "pk": 17
+    }, 
+    {
+        "fields": {
+            "date": "2009-03-09 19:00:00", 
+            "details": "Our monthly meeting for March, 2009.\r\n\r\nNote, this is not our usual room, we had to change it for this meeting.", 
+            "firm": 1, 
+            "location": "ME4356 at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 18
+    }, 
+    {
+        "fields": {
+            "date": "2009-04-14 19:00:00", 
+            "details": "This meeting strays from our usual format, and location. We're planning to reserve a back room for our meeting, and do some friendly networking, plus some lightning talks. \r\n\r\nNote the location for this meeting, as opposed to Carleton U.\r\n\r\nThe booking of the back room in the pub is free, but please plan to pay for it in pub fare. We're in the \"big room\". Look for the geeks. :)\r\n\r\n<iframe width=\"425\" height=\"350\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=georgetown+pub&amp;sll=45.275485,-75.920119&amp;sspn=0.010238,0.017209&amp;ie=UTF8&amp;ll=45.429058,-75.665245&amp;spn=0.163463,0.275345&amp;z=12&amp;iwloc=A&amp;cid=13971760629690666091&amp;output=embed\"></iframe><br /><small><a href=\"http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=georgetown+pub&amp;sll=45.275485,-75.920119&amp;sspn=0.010238,0.017209&amp;ie=UTF8&amp;ll=45.429058,-75.665245&amp;spn=0.163463,0.275345&amp;z=12&amp;iwloc=A&amp;cid=13971760629690666091\" style=\"color:#0000FF;text-align:left\">View Larger Map</a></small>", 
+            "firm": 1, 
+            "location": "The Georgetown Pub, 1159 Bank Street. Ottawa, Ontario K1S 3X7", 
+            "locationurl": "http://tinyurl.com/cv2u6o", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 19
+    }, 
+    {
+        "fields": {
+            "date": "2009-06-09 19:00:00", 
+            "details": "Our regular monthly meeting, held again at a back room at the Georgetown. Look for the geeks.\r\n\r\n<iframe width=\"425\" height=\"350\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=georgetown+pub&amp;sll=45.275485,-75.920119&amp;sspn=0.010238,0.017209&amp;ie=UTF8&amp;ll=45.429058,-75.665245&amp;spn=0.163463,0.275345&amp;z=12&amp;iwloc=A&amp;cid=13971760629690666091&amp;output=embed\"></iframe><br /><small><a href=\"http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=georgetown+pub&amp;sll=45.275485,-75.920119&amp;sspn=0.010238,0.017209&amp;ie=UTF8&amp;ll=45.429058,-75.665245&amp;spn=0.163463,0.275345&amp;z=12&amp;iwloc=A&amp;cid=13971760629690666091\" style=\"color:#0000FF;text-align:left\">View Larger Map</a></small>", 
+            "firm": 1, 
+            "location": "The Georgetown Pub, 1159 Bank Street. Ottawa, Ontario K1S 3X7", 
+            "locationurl": "http://tinyurl.com/cv2u6o", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 20
+    }, 
+    {
+        "fields": {
+            "date": "2009-07-14 19:00:00", 
+            "details": "TBD", 
+            "firm": 0, 
+            "location": "TBD", 
+            "locationurl": "", 
+            "speakers_wanted": 1
+        }, 
+        "model": "main.meeting", 
+        "pk": 21
+    }, 
+    {
+        "fields": {
+            "date": "2009-08-11 19:00:00", 
+            "details": "TBD", 
+            "firm": 0, 
+            "location": "TBD", 
+            "locationurl": "", 
+            "speakers_wanted": 1
+        }, 
+        "model": "main.meeting", 
+        "pk": 22
+    }, 
+    {
+        "fields": {
+            "date": "2010-02-09 19:00:00", 
+            "details": "Our not so regular monthly meeting, held again at a back room at the Georgetown. Look for the geeks. \r\n\r\n<iframe width=\"425\" height=\"350\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=georgetown+pub&amp;sll=45.275485,-75.920119&amp;sspn=0.010238,0.017209&amp;ie=UTF8&amp;ll=45.429058,-75.665245&amp;spn=0.163463,0.275345&amp;z=12&amp;iwloc=A&amp;cid=13971760629690666091&amp;output=embed\"></iframe><br /><small><a href=\"http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=georgetown+pub&amp;sll=45.275485,-75.920119&amp;sspn=0.010238,0.017209&amp;ie=UTF8&amp;ll=45.429058,-75.665245&amp;spn=0.163463,0.275345&amp;z=12&amp;iwloc=A&amp;cid=13971760629690666091\" style=\"color:#0000FF;text-align:left\">View Larger Map</a></small>", 
+            "firm": 1, 
+            "location": "The Georgetown Pub, 1159 Bank Street. Ottawa, Ontario K1S 3X7", 
+            "locationurl": "http://tinyurl.com/cv2u6o", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 23
+    }, 
+    {
+        "fields": {
+            "date": "2010-04-13 19:00:00", 
+            "details": "For our regular monthly meeting we have a variety of suggestions. Currently we have one confirmed talk from Ian with two tentative. I'll see if I can come up with something and if you want to join in, just let us know on the mailing list. ", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 24
+    }, 
+    {
+        "fields": {
+            "date": "2010-05-18 19:00:00", 
+            "details": "Our regular monthly meeting for May will be pushed back by one week due to a member conflict. We hope that's ok for everyone. The theme of this meeting is \"extending Python in C/C++\". See below for talk details. ", 
+            "firm": 1, 
+            "location": "3444 ME at Carleton University", 
+            "locationurl": "http://tinyurl.com/2dnrgl", 
+            "speakers_wanted": 0
+        }, 
+        "model": "main.meeting", 
+        "pk": 25
+    }, 
+    {
+        "fields": {
+            "details": "I will give an overview of how the OPAG website was rebuilt to use [Django](http://www.djangoproject.com/).\r\n\r\nI hope to cover:\r\n\r\n- installation of Django (quickly)\r\n- configuration for development inside an SCM system (I used [Mercurial](http://www.selenic.com/mercurial/wiki/))\r\n- use different databases in development and deployment\r\n- deployment with [mod_python](http://www.modpython.org/)", 
+            "meeting": 1, 
+            "name": "Michael P. Soulier", 
+            "topic": "OPAG site migration to Django", 
+            "url": "http://gatekeeper.digitaltorque.ca/hg/opag/"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "details": "Andrew Francis will discuss how he used [Stackless Python](http://www.stackless.com/) and the [Twisted](http://twistedmatrix.com/) Network Framework in the construction of his Python-based [WS-BPEL](http://www.oasis-open.org/committees/wsbpel/) (Web Services - Business Process Execution Language) processor \"Stagehand.\"", 
+            "meeting": 2, 
+            "name": "Andrew Francis", 
+            "topic": "Stackless Python and Twisted in \"Stagehand\"", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 3
+    }, 
+    {
+        "fields": {
+            "details": "At [Mitel](http://www.mitel.com/), I work full-time on a Linux server and its applications, the configuration of which is handled via a web interface. \r\n\r\nI am in the process of migrating the existing [Perl](http://www.perl.com/) framework to one using [Python](http://www.python.org/) and [Django](http://www.djangoproject.com/), and I plan to talk about the challenges I've had so far, and the solutions I've come up with, in having to push Django into a legacy environment such as this, as opposed to a brand new site. ", 
+            "meeting": 4, 
+            "name": "Michael P. Soulier", 
+            "topic": "Deploying Django for server management", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 4
+    }, 
+    {
+        "fields": {
+            "details": "I've developed a very small sketching application for a tablet PC.  The first prototype was grown using [wx](http://www.wxpython.org), the second and current prototype was re-written in [pygtk](http://www.pygtk.org).  In this talk I'll try to describe some of the differences I've noticed.", 
+            "meeting": 5, 
+            "name": "Neal Holtz", 
+            "topic": "PyGTK vs. wxPython", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 5
+    }, 
+    {
+        "fields": {
+            "details": "From the [Scapy website](http://www.secdev.org/projects/scapy/):\r\n<blockquote>\r\nScapy is a powerful interactive packet manipulation program. It is able to forge or decode packets of a wide number of protocols, send them on the wire, capture them, match requests and replies, and much more.\r\n</blockquote>\r\n\r\nPeter will give an overview of Scapy.", 
+            "meeting": 7, 
+            "name": "Peter Shook", 
+            "topic": "Overview of Scapy", 
+            "url": "http://www.secdev.org/projects/scapy/"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 6
+    }, 
+    {
+        "fields": {
+            "details": "Peter will give an overview of the new features in Python 3.0.\r\n\r\n   * [Metaclasses in Python 3000](http://www.python.org/dev/peps/pep-3115/)\r\n   * [Function Annotations](http://www.python.org/dev/peps/pep-3107/)\r\n   * [Extended Iterable Unpacking](http://www.python.org/dev/peps/pep-3132/)  \r\n   * [Advanced String Formatting](http://www.python.org/dev/peps/pep-3101/)\r\n   * [Class Decorators](http://www.python.org/dev/peps/pep-3129/)\r\n", 
+            "meeting": 9, 
+            "name": "Peter Shook", 
+            "topic": "Python 3.0", 
+            "url": "http://docs.python.org/dev/3.0/whatsnew/3.0.html"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 7
+    }, 
+    {
+        "fields": {
+            "details": "While [Django](http://www.djangoproject.com/) is a wonderful framework for web applications, often back-end work must be done to keep those applications running. I will introduce some techniques that I am using to work with the Django models directly from back-end Python scripts to perform maintenance, and automate some tasks in my current project. ", 
+            "meeting": 10, 
+            "name": "Michael P. Soulier", 
+            "topic": "Back-end Django", 
+            "url": "http://www.djangoproject.com/"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 8
+    }, 
+    {
+        "fields": {
+            "details": "While nothing special is required of any web framework to make use of AJAX-based features, Django is actually well-suited to supporting AJAX. While it won't write your code for you, thanks to frameworks like [Prototype](http://www.prototypejs.org/), it's really not difficult to make use of AJAX in a variety of ways. \r\n\r\nI will demonstrate some of what I've done so far in this respect. ", 
+            "meeting": 10, 
+            "name": "Michael P. Soulier", 
+            "topic": "Django and Ajax", 
+            "url": "http://del.icio.us/msoulier/ajax"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 9
+    }, 
+    {
+        "fields": {
+            "details": "Having worked with Django in the front-end and the back-end, I ran into concurrency issues very quickly. I'll quickly go over how I solved them using PostgreSQL as the database, via transactions and locking.\r\n\r\nIt is an early solution, so your comments are welcome to help me improve it, as I am by no means a PostgreSQL expert. ", 
+            "meeting": 18, 
+            "name": "Michael Soulier", 
+            "topic": "Handling concurrency in Django", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 10
+    }, 
+    {
+        "fields": {
+            "details": "I've been using [Git](http://git-scm.com/) now for a while, and I am working on a talk internal to the company that I work for to introduce them to it. I'd like to try out the public parts of the talk on the OPAG group, and provide some comparisons to Mercurial, since I did introduce Hg a while back.\r\n\r\nIf there is a [Bazaar](http://bazaar-vcs.org/) expert about, I wouldn't mind some comparison there either.", 
+            "meeting": 18, 
+            "name": "Michael Soulier", 
+            "topic": "Introduction to Git", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 11
+    }, 
+    {
+        "fields": {
+            "details": "[Urwid](http://excess.org/urwid/) is a console user interface library for Python\r\n\r\nIan will talk about Urwid's new High colour support and new main event\r\nloops including [Twisted](http://twistedmatrix.com) and [GTK](http://www.gtk.org/).", 
+            "meeting": 19, 
+            "name": "Ian Ward", 
+            "topic": "Urwid: shiny new features", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 12
+    }, 
+    {
+        "fields": {
+            "details": "See topic. :)", 
+            "meeting": 19, 
+            "name": "Ian Ward", 
+            "topic": "general ramblings about PyCon 2009", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 13
+    }, 
+    {
+        "fields": {
+            "details": "Ian is going to tell us about what's coming in [Django 1.1](http://www.djangoproject.com/weblog/2009/may/07/django-1-1-update/) appearing on a mirror near you soon.", 
+            "meeting": 20, 
+            "name": "Ian Ward", 
+            "topic": "Django 1.1", 
+            "url": "http://www.fosslc.org/drupal/node/447"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 14
+    }, 
+    {
+        "fields": {
+            "details": "If you are using the standard database-backed session store, and are making use of transactions, there is an issue that you can run into in Django if you are managing your transactions manually.\r\n\r\nI will outline and problem, and a few solutions, including the one I chose. ", 
+            "meeting": 20, 
+            "name": "Michael P. Soulier", 
+            "topic": "Lightning talk: Manual transactions and session gotcha in Django", 
+            "url": "http://docs.djangoproject.com/en/dev/topics/db/transactions/#topics-db-transactions"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 15
+    }, 
+    {
+        "fields": {
+            "details": "Scott is going to enlighten us on [sphinx](http://sphinx.pocoo.org/), a Python documentation tool suite based on reStructured Text. ", 
+            "meeting": 23, 
+            "name": "Scott Lyons", 
+            "topic": "Sphinx", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 16
+    }, 
+    {
+        "fields": {
+            "details": "I am going to give a quick overview of Python's \r\n[multiprocessing](http://www.python.org/doc/current/library/multiprocessing.html) module and how I am currently using it to provide a \r\n[Twisted](http://twistedmatrix.com/trac/)-based web service.", 
+            "meeting": 23, 
+            "name": "Michael Soulier", 
+            "topic": "multiprocessing module", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 17
+    }, 
+    {
+        "fields": {
+            "details": "Ian will give a short presentation and lead a discussion about building custom \r\n[Django](http://www.djangoproject.com/) forms with non-trivial validation code.  \r\n[Formset](http://docs.djangoproject.com/en/1.1/topics/forms/formsets/#topics-forms-formsets) usage will also be covered.", 
+            "meeting": 24, 
+            "name": "Ian Ward", 
+            "topic": "Custom Django forms", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 18
+    }, 
+    {
+        "fields": {
+            "details": "Scott may be presenting a talk on extensions in C. ", 
+            "meeting": 24, 
+            "name": "Scott Lyons", 
+            "topic": "C integration 101", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 19
+    }, 
+    {
+        "fields": {
+            "details": "Andrzej might show up with some hardware for his home energy dashboard project.", 
+            "meeting": 24, 
+            "name": "Andrzej Borowiec", 
+            "topic": "Home energy dashboard", 
+            "url": ""
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 20
+    }, 
+    {
+        "fields": {
+            "details": "Brenda will present a short introduction to the [Byteflow](http://byteflow.su/) blogging software, which makes use of [Django](http://www.djangoproject.com/).", 
+            "meeting": 24, 
+            "name": "Brenda Butler", 
+            "topic": "Introduction to byteflow", 
+            "url": "http://byteflow.su/"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 21
+    }, 
+    {
+        "fields": {
+            "details": "Scott is going to share with us how to extend Python via C/C++.\r\n\r\nWe need Scott to confirm this but I believe he is going to begin with basic inclusion of Python.h, and then move up to more abstracted methods of extension, such as stub generation tools.\r\n\r\nI could conceivably provide examples in Perl and Java for comparison, if required. ", 
+            "meeting": 25, 
+            "name": "Scott Lyon", 
+            "topic": "Python extensions in C/C++", 
+            "url": "http://docs.python.org/release/2.5.2/ext/intro.html"
+        }, 
+        "model": "main.meetingtalk", 
+        "pk": 22
+    }
+]

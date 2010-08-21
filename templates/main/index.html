@@ -23,6 +23,7 @@
         into the real world from time to time as well.
     </p>
     <hr>
+    <!-- FIXME: need an inclusion tag for displaying a meeting -->
     <h2>Upcoming Meetings</h2>
     <table class="meetings_table">
     {% if meetings %}
@@ -44,7 +45,17 @@
         <tr>
             <td class="meetings_header">Details:</td>
             <td class="meetings_value">
-                {{ meeting.details }}
+                {{ meeting.details|markdown }}
+            </td>
+        </tr>
+        <tr>
+            <td class="meetings_header">Talks planned</td>
+            <td class="meetings_value">
+                {% if meeting.talks %}
+                Lets describe the talks here
+                {% else %}
+                There are no talks planned for this meeting yet. Want to help?
+                {% endif %}
             </td>
         </tr>
         <tr>
@@ -61,8 +72,8 @@
             <td colspan="2">
                 {% if meeting.speakers_wanted %}
                 Note: We are still looking for additional speakers for this
-                meeting. Please <a href="/contactus/">contact us</a> if you
-                would like to share something with us.
+                meeting. Please <a href="{% url contactus %}">contact us</a>
+                if you would like to share something with us.
                 {% endif %}
             </td>
         </tr>
@@ -78,5 +89,10 @@
             </td>
         </tr>
     {% endif %}
+    <tr>
+        <td colspan="2" style="text-align: right;">
+            <h5><a href="{% url past-meetings %}">Past meetings</a></h5>
+        </td>
+    </tr>
     </table>
 {% endblock %}

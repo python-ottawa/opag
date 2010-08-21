@@ -36,7 +36,6 @@ def membership(request):
 def past_meetings(request):
     "The archived meetings page."
     bctrail = make_bctrail(['Home', '/',
-                            'Meetings', '/meetings/',
                             'Past meetings'])
     meetings = Meeting.objects.all().filter(date__lt=date.today()).order_by('-date')
     return render_to_response('main/past_meetings.html',

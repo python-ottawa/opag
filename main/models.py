@@ -33,7 +33,7 @@ class Meeting(models.Model):
 
 class MeetingTalk(models.Model):
     """This class captures a topic being discussed at a meeting."""
-    meeting = models.ForeignKey(Meeting)
+    meeting = models.ForeignKey(Meeting, related_name="talks")
     name = models.CharField('the name of the speaker',
                             max_length=100)
     topic = models.CharField('the topic of the talk',
