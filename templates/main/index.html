@@ -25,7 +25,8 @@
     <hr>
     <h2>Upcoming Meetings</h2>
     <table class="meetings_table">
-    {% for meeting in meetings %}
+    {% if meetings %}
+        {% for meeting in meetings %}
         <tr>
             <td class="meetings_header">Date:</td>
             <td class="meetings_value">{{ meeting.date }}</td>
@@ -68,6 +69,14 @@
         <tr class="meeting_break">
             <td colspan="2">&nbsp;</td>
         </tr>
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td>
+                There are no meetings planned at the moment. Feel free to get
+                on the mailing list and suggest one.
+            </td>
+        </tr>
+    {% endif %}
     </table>
 {% endblock %}
