@@ -71,13 +71,14 @@ a:visited {
 .meetings_header {
     text-align: right;
     vertical-align: top;
-    background: #e8e8e8;
+    font-weight: bold;
+    background: lightgrey;
 }
 
 .meetings_value {
     text-align: left;
     vertical-align: top;
-    background: #e8e8e8;
+    background: lightgrey;
 }
 
 .meeting_break {

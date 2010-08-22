@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load markup %}
+{% load main_extras %}
 
 <!-- FIXME - need to factor this template out, as it's shared with the
 meetings page. -->
@@ -17,39 +18,7 @@ here.</p>
 <table class="meetings_table">
 {% if meetings %}
     {% for meeting in meetings %}
-    <tr>
-        <td class="meetings_header">Date:</td>
-        <td class="meetings_value">{{ meeting.date }}</td>
-    </tr>
-    <tr>
-        <td class="meetings_header">Location:</td>
-        <td class="meetings_value">
-            {% if meeting.locationurl %}
-            <a href="{{ meeting.locationurl }}">{{ meeting.location }}</a>
-            {% else %}
-            {{ meeting.location }}
-            {% endif %}
-        </td>
-    </tr>
-    <tr>
-        <td class="meetings_header">Details:</td>
-        <td class="meetings_value">
-            {{ meeting.details|markdown }}
-        </td>
-    </tr>
-    <tr>
-        <td class="meetings_header">Talks planned</td>
-        <td class="meetings_value">
-            {% if meeting.talks %}
-            Lets describe the talks here
-            {% else %}
-            There are no talks planned for this meeting yet. Want to help?
-            {% endif %}
-        </td>
-    </tr>
-    <tr class="meeting_break">
-        <td colspan="2">&nbsp;</td>
-    </tr>
+        {% render_meeting meeting "1" %}
     {% endfor %}
 {% else %}
     <tr>
