@@ -52,17 +52,17 @@
         </tr>
         {% if not short %}
         <tr>
-            <td class="meetings_header">Meeting firm:</td>
+            <td class="meetings_header">Meeting status:</td>
             <td class="meetings_value">
                 {% if meeting.firm %}
-                Meeting confirmed, hope to see you there.
+                Confirmed, hope to see you there.
                 {% else %}
                 Still tentative, need to confirm details.
                 {% endif %}
             </td>
         </tr>
         <tr>
-            <td colspan="2">
+            <td colspan="2" style="font-style: italic;">
                 {% if meeting.speakers_wanted %}
                 Note: We are still looking for additional speakers for this
                 meeting. Please <a href="{% url contactus %}">contact us</a>
