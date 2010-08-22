@@ -58,5 +58,21 @@ here.</p>
         </td>
     </tr>
 {% endif %}
+<tr>
+    <td style="text-align: left;">
+        {% if page.has_previous %}
+        <a href="{% url past-meetings-page page.previous_page_number %}">Newer meetings</a>
+        {% else %}
+        &nbsp;
+        {% endif %}
+    </td>
+    <td style="text-align: right;">
+        {% if page.has_next %}
+        <a href="{% url past-meetings-page page.next_page_number %}">Older meetings</a>
+        {% else %}
+        &nbsp;
+        {% endif %}
+    </td>
+</tr>
 </table>
 {% endblock %}
