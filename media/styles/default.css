@@ -42,10 +42,6 @@ h6 {
     line-height: 30px
 }
 
-p {
-    color: #333333;
-}
-
 a:link {
     color: navy
 }
@@ -83,4 +79,19 @@ a:visited {
 
 .meeting_break {
     background: white;
+}
+
+.notice_table {
+    width: 70%;
+    border-width: 5px;
+    border-style: groove solid;
+    border-color: navy;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 5px 10px 5px;
+    padding: 5px;
+}
+
+table.notice_table tr td {
+    color: red;
 }

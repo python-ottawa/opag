@@ -22,8 +22,21 @@
         typically at Carleton University, but we've been known to venture out
         into the real world from time to time as well.
     </p>
-    <hr>
-    <!-- FIXME: Need to support notices here -->
+    {% if notices %}
+        {% for notice in notices %}
+            {% if notice.visible %}
+            <table class="notice_table">
+                <tr>
+                    <td>Notice: {{ notice.title }}</td>
+                </tr>
+                <tr>
+                    <td>{{ notice.content|markdown }}</td>
+                </tr>
+            </table>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <hr />
     <h2>Upcoming Meetings</h2>
     <table class="meetings_table">
     {% if meetings %}

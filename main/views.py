@@ -4,7 +4,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import Http404
 from django.core.paginator import Paginator
-from opag.main.models import Meeting
+from opag.main.models import Meeting, Notice
 from opag.lib.shared import make_bctrail
 from opag.lib.paginator import OpagPaginator
 from datetime import date
@@ -15,9 +15,11 @@ def index(request):
     bctrail = 'Home'
     meetings = Meeting.objects.all().filter(
         date__gte=date.today()).order_by('date')
+    notices = Notice.objects.all().order_by('submitted_date')
     return render_to_response('main/index.html',
         RequestContext(request, {
             'meetings': meetings,
+            'notices': notices,
             'bctrail': bctrail }))
 
 def contactus(request):
