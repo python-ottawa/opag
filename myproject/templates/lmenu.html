@@ -5,7 +5,7 @@
             <td align="center">
                 <a 
                     href="http://www.python.org"><img 
-                    src="/media/images/python-powered-w-140x56.png" 
+                    src="/opagmedia/images/python-powered-w-140x56.png" 
                     width="140" 
                     height="56" 
                     border=0 
@@ -16,13 +16,13 @@
     <br />
 
     {% for section in menu %}
-    <img src="/media/images/{{ section.image }}"
+    <img src="/opagmedia/images/{{ section.image }}"
          alt="{{ section.title }}" /><br /><br />
     <table>
         {% for item in section.data %}
         <tr valign="center">
             <td>
-                <img src="/media/images/rarrow.png" valign="center" />
+                <img src="/opagmedia/images/rarrow.png" valign="center" />
             </td>
             <td>
                 <a href="{{ item.link }}">{{ item.title }}</a>

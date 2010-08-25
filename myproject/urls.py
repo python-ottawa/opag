@@ -17,7 +17,7 @@ if settings.DEVELOPMENT:
     # If in development mode
     urlpatterns += patterns('',
         # To serve static content in development.
-        (r'^media/(?P<path>.*)$',
+        (r'^opagmedia/(?P<path>.*)$',
             'django.views.static.serve',
             { 'document_root': os.environ['HOME'] + '/work/opag/myproject/media' }),
     )
