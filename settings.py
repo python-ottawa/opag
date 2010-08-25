@@ -90,6 +90,6 @@ INSTALLED_APPS = (
 
 # Look for a local settings file.
 import os, sys
-if os.path.exists('/var/www/opag/settings_local.py'):
-    sys.path.append('/var/www/opag')
+if os.path.exists('/home/msoulier/webapps/opag_site/myproject/settings_local.py'):
+    sys.path.append('/home/msoulier/webapps/opag_site/myproject')
     from settings_local import *
