@@ -60,7 +60,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
-ROOT_URLCONF = 'opag.urls'
+ROOT_URLCONF = 'myproject.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
@@ -84,8 +84,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.markup',
     'django.contrib.flatpages',
-    'opag.main',
-    'opag.lib',
+    'myproject.main',
+    'myproject.lib',
 )
 
 # Look for a local settings file.

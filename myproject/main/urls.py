@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import patterns, url
 
-urlpatterns = patterns('opag.main.views',
+urlpatterns = patterns('myproject.main.views',
     url(r'membership/$', 'membership'),
     url(r'aboutsite/$', 'aboutsite'),
     url(r'past_meetings/(?P<pagenum>\d+)/$',

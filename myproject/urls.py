@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     # Admin access
     (r'^admin/', include(admin.site.urls)),
     # Default handler is the main app.
-    (r'', include('opag.main.urls'))
+    (r'', include('myproject.main.urls'))
 )
 
 if settings.DEVELOPMENT:
@@ -19,8 +19,8 @@ if settings.DEVELOPMENT:
         # To serve static content in development.
         (r'^media/(?P<path>.*)$',
             'django.views.static.serve',
-            { 'document_root': os.environ['HOME'] + '/work/opag/media' }),
+            { 'document_root': os.environ['HOME'] + '/work/opag/myproject/media' }),
     )
 
-handler404 = 'opag.main.views.notfound'
-handler500 = 'opag.main.views.servererror'
+handler404 = 'myproject.main.views.notfound'
+handler500 = 'myproject.main.views.servererror'

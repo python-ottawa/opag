@@ -4,9 +4,9 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import Http404
 from django.core.paginator import Paginator
-from opag.main.models import Meeting, Notice
-from opag.lib.shared import make_bctrail
-from opag.lib.paginator import OpagPaginator
+from myproject.main.models import Meeting, Notice
+from myproject.lib.shared import make_bctrail
+from myproject.lib.paginator import OpagPaginator
 from datetime import date
 from time import time
 

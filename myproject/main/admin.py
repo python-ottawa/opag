@@ -1,5 +1,5 @@
 from django.contrib import admin
-from opag.main.models import Notice, Meeting, MeetingTalk
+from myproject.main.models import Notice, Meeting, MeetingTalk
 
 class NoticeAdmin(admin.ModelAdmin):
     list_display = ('title', 'visible')
