@@ -1,4 +1,8 @@
+*.so
+*.so.*
 *.pyc
+*.mo
+lib/*
+apache2/logs/*
 *.sqlite3
 settings_local.py
-*.swp

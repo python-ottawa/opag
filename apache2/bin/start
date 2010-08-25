@@ -1,0 +1,3 @@
+#!/bin/bash
+
+LD_LIBRARY_PATH=/home/msoulier/webapps/opag_site/apache2/lib /home/msoulier/webapps/opag_site/apache2/bin/httpd.worker -f /home/msoulier/webapps/opag_site/apache2/conf/httpd.conf -k start

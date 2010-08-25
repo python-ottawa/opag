@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/home/msoulier/webapps/opag_site/apache2/bin/stop
+sleep 5
+/home/msoulier/webapps/opag_site/apache2/bin/start

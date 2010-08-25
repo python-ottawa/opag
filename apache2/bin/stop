@@ -1,0 +1,14 @@
+#!/bin/env python
+
+import os
+
+stopped = False
+
+# Stop Apache if it is running.
+for line in os.popen('ps -o pid,command -u msoulier'):
+    if '/home/msoulier/webapps/opag_site/apache2/conf/httpd.conf' in line:
+        stopped = True
+        os.system('kill %s' % line.split()[0])
+
+if not stopped:
+    print "Apache is not running."
