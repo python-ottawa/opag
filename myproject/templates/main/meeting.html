@@ -34,7 +34,13 @@
                     </tr>
                     <tr>
                         <td>Topic:</td>
-                        <td><a href="{{ talk.url }}">{{ talk.topic }}</a></td>
+                        <td>
+                            {% if talk.url %}
+                            <a href="{{ talk.url }}">{{ talk.topic }}</a>
+                            {% else %}
+                            {{ talk.topic }}
+                            {% endif %}
+                        </td>
                     </tr>
                     <tr>
                         <td>Details:</td>
