@@ -2,7 +2,9 @@
 
         <tr>
             <td class="meetings_header">Date:</td>
-            <td class="meetings_value">{{ meeting.date }}</td>
+            <td class="meetings_value">
+                {{ meeting.date|date:"D d M Y \a\t fa" }}
+            </td>
         </tr>
         <tr>
             <td class="meetings_header">Location:</td>
