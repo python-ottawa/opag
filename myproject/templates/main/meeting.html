@@ -27,6 +27,7 @@
             <td class="meetings_value">
                 {% if meeting.talks %}
                 <table>
+                    <!-- FIXME: sort by id -->
                     {% for talk in meeting.talks.all %}
                     <tr>
                         <td>Speaker:</td>

@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+import time
 
 class Notice(models.Model):
     """This model class captures a notice for the front page. We can have
@@ -29,7 +30,7 @@ class Meeting(models.Model):
     speakers_wanted = models.BooleanField('speakers are still wanted',
                                           default=True)
     def __str__(self):
-        return str(self.date)
+        return self.date.strftime("%c")
 
 class MeetingTalk(models.Model):
     """This class captures a topic being discussed at a meeting."""
@@ -43,7 +44,7 @@ class MeetingTalk(models.Model):
                           blank=True)
 
     def __str__(self):
-        return self.topic
+        return "%s: %s" % (self.name, self.topic)
 
 class Article(models.Model):
     """This class represents a written article."""
