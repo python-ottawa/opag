@@ -1,4 +1,5 @@
 from django import template
+from django.core.urlresolvers import reverse
 
 register = template.Library()
 
@@ -26,20 +27,20 @@ def left_menu():
     "This inclusion tag sets up the data for the left menu."
     club_info = [
         {
-            'title': 'Membership Instructions',
-            'link': rootpath + 'membership/'
+            'title': 'About the group',
+            'link': reverse('about')
         },
         {
-            'title': 'About the Website',
-            'link': rootpath + 'aboutsite/'
+            'title': 'About the website',
+            'link': reverse('aboutsite')
         },
         {
             'title': 'Financials',
-            'link': rootpath + 'financials/'
-        },
-        {
+            'link': rootpath + 'financials/' # FIXME: can I use reverse with
+        },                                   # with a flatpage? What about
+        {                                    # the bctrail?
             'title': 'Contact Us',
-            'link': rootpath + 'contactus/'
+            'link': reverse('contactus')
         }
     ]
 

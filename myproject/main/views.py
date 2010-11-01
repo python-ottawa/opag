@@ -19,21 +19,24 @@ def index(request):
         RequestContext(request, {
             'meetings': meetings,
             'notices': notices,
-            'bctrail': bctrail }))
+            'bctrail': bctrail
+            }))
 
 def contactus(request):
     "The contact us page."
     bctrail = make_bctrail(['Home', '/', 'Contact us'])
     return render_to_response('main/contactus.html',
-                              { 'bctrail': bctrail },
-                                context_instance=RequestContext(request))
+        RequestContext(request, {
+            'bctrail': bctrail
+            }))
 
-def membership(request):
+def about(request):
     "The membership page."
-    bctrail = make_bctrail(['Home', '/', 'Membership instructions'])
-    return render_to_response('main/membership.html',
-                              { 'bctrail': bctrail },
-                                context_instance=RequestContext(request))
+    bctrail = make_bctrail(['Home', '/', 'About the group'])
+    return render_to_response('main/about.html',
+        RequestContext(request, {
+            'bctrail': bctrail
+            }))
 
 def past_meetings(request, pagenum=1):
     "The archived meetings page."
@@ -45,26 +48,32 @@ def past_meetings(request, pagenum=1):
     page = paginator.page(pagenum)
     page.pagenum = pagenum
     return render_to_response('main/past_meetings.html',
-                              { 'meetings': page.object_list,
-                                'page': page,
-                                'bctrail': bctrail },
-                                context_instance=RequestContext(request))
+        RequestContext(request, {
+            'meetings': page.object_list,
+            'page': page,
+            'bctrail': bctrail
+            }))
 
 def aboutsite(request):
     "The about site page."
-    bctrail = make_bctrail(['Home', '/', 'About site'])
+    bctrail = make_bctrail(['Home', '/', 'About the website'])
     return render_to_response('main/aboutsite.html',
-                              { 'bctrail': bctrail },
-                                context_instance=RequestContext(request))
+        RequestContext(request, {
+            'bctrail': bctrail
+            }))
 
 def notfound(request):
     "A 404 handler."
     bctrail = make_bctrail(['Home', '/', 'Page not found'])
     return render_to_response('404.html',
-                              { 'bctrail': bctrail })
+        RequestContext(request, {
+            'bctrail': bctrail
+            }))
 
 def servererror(request):
     "A handler for displaying a 'not yet implemented' interface."
     bctrail = make_bctrail(['Home', '/', 'Server error'])
     return render_to_response('500.html',
-                              { 'bctrail': bctrail })
+        RequestContext(request, {
+            'bctrail': bctrail
+            }))
