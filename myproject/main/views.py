@@ -65,10 +65,12 @@ def aboutsite(request):
 def notfound(request):
     "A 404 handler."
     bctrail = make_bctrail(['Home', '/', 'Page not found'])
-    return render_to_response('404.html',
+    res = render_to_response('404.html',
         RequestContext(request, {
             'bctrail': bctrail
             }))
+    res.status_code = 404
+    return res
 
 def servererror(request):
     "A handler for displaying a 'not yet implemented' interface."
