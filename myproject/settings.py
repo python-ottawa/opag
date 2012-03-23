@@ -86,7 +86,6 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'myproject.main',
     'myproject.lib',
-    'django_extensions',
 )
 
 # Look for a local settings file.
