@@ -75,7 +75,9 @@ def notfound(request):
 def servererror(request):
     "A handler for displaying a 'not yet implemented' interface."
     bctrail = make_bctrail(['Home', '/', 'Server error'])
-    return render_to_response('500.html',
+    res = render_to_response('500.html',
         RequestContext(request, {
             'bctrail': bctrail
             }))
+    res.status_code = 500
+    return res
