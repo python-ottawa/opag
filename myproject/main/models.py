@@ -19,11 +19,11 @@ class Meeting(models.Model):
     date = models.DateTimeField('the date of the meeting')
     location = models.CharField(
         'the meeting location',
-        default="3444 ME at Carleton University",
+        default="",
         max_length=255)
     locationurl = models.URLField(
         'a map link for the location',
-        default="http://tinyurl.com/2dnrgl",
+        default="",
         blank=True)
     details = models.TextField('the meeting details', blank=True)
     firm = models.BooleanField('the meeting is firm', default=False)
