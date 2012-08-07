@@ -3,10 +3,12 @@
 {% load main_extras %}
 
 {% block content %}
+    <div class="row-fluid">
     <p>
         <img src="/opagmedia/images/w.png" width="33" height="23" valign="center"
         alt="W" />elcome to the home of the Ottawa Python Authors Group!
     </p>
+    </div>
     {% if notices %}
         {% for notice in notices %}
             {% if notice.visible %}
@@ -21,30 +23,27 @@
             {% endif %}
         {% endfor %}
     {% endif %}
-    <hr />
-    <h2>Upcoming Meetings</h2>
-    <table class="meetings_table">
+    <div class="row-fluid">
+        <h2>Upcoming Meetings</h2>
+    </div>
     {% if meetings %}
         {% for meeting in meetings %}
             {% render_meeting meeting %}
         {% endfor %}
     {% else %}
-        <tr>
-            <td>
-                <div class="alert alert-info">
-                <h4 class="alert-heading">
-                Awkward!
-                </h4>
-                    There are no meetings planned at the moment. Feel free to
-                    get on the mailing list and suggest one.
-                </div>
-            </td>
-        </tr>
+    <div class="row-fluid">
+        <div class="alert alert-info">
+        <h4 class="alert-heading">
+        Awkward!
+        </h4>
+            There are no meetings planned at the moment. Feel free to
+            get on the mailing list and suggest one.
+        </div>
+    </div>
     {% endif %}
-    <tr>
-        <td colspan="2" style="text-align: right;">
+    <div class="row">
+        <div class="span12">
             <h5><a href="{% url past-meetings %}">Past meetings</a></h5>
-        </td>
-    </tr>
-    </table>
+        </div>
+    </div>
 {% endblock %}
