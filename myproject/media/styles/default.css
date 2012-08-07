@@ -34,6 +34,14 @@ h6 {
     line-height: 30px
 }
 
+.label a:link {
+    color: white;
+}
+
+.label a:visited {
+    color: white;
+}
+
 a:link {
     color: navy
 }

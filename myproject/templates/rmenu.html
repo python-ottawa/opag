@@ -24,15 +24,12 @@
         {% for item in quicklinks %}
         <tr valign="center">
             <td>
-                <img src="/opagmedia/images/rarrow.png" width="9" height="10" valign="center" />
-            </td>
-            <td>
-                <a href="{{ item.link }}">{{ item.title }}</a>
+                <span class="label label-info"><a href="{{ item.link }}">{{ item.title }}</a></span>
             </td>
         </tr>
         {% endfor %}
     </table>
     <br />
-    <p><a href="{{rootpath}}admin/">Admin</a></p>
+    <span class="label label-important"><a href="{{rootpath}}admin/">Admin</a></span>
     </p>
 </td>

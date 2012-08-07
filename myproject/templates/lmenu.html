@@ -22,10 +22,7 @@
         {% for item in section.data %}
         <tr valign="center">
             <td>
-                <img src="/opagmedia/images/rarrow.png" valign="center" />
-            </td>
-            <td>
-                <a href="{{ item.link }}">{{ item.title }}</a>
+                <span class="label label-info"><a href="{{ item.link }}">{{ item.title }}</a></span>
             </td>
         </tr>
         {% endfor %}
