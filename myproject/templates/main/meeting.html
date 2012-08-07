@@ -1,85 +1,81 @@
 {% load markup %}
 
-        <tr>
-            <td class="meetings_header">Date:</td>
-            <td class="meetings_value">
-                {{ meeting.date|date:"D d M Y \a\t fa" }}
-            </td>
-        </tr>
-        <tr>
-            <td class="meetings_header">Location:</td>
-            <td class="meetings_value">
-                {% if meeting.locationurl %}
-                <a href="{{ meeting.locationurl }}">{{ meeting.location }}</a>
-                {% else %}
-                {{ meeting.location }}
-                {% endif %}
-            </td>
-        </tr>
-        <tr>
-            <td class="meetings_header">Details:</td>
-            <td class="meetings_value">
-                {{ meeting.details|markdown }}
-            </td>
-        </tr>
-        <tr>
-            <td class="meetings_header">Talks planned</td>
-            <td class="meetings_value">
-                {% if meeting.talks %}
-                <table>
-                    <!-- FIXME: sort by id -->
-                    {% for talk in meeting.talks.all %}
-                    <tr>
-                        <td>Speaker:</td>
-                        <td>{{ talk.name }}</td>
-                    </tr>
-                    <tr>
-                        <td>Topic:</td>
-                        <td>
-                            {% if talk.url %}
-                            <a href="{{ talk.url }}">{{ talk.topic }}</a>
-                            {% else %}
-                            {{ talk.topic }}
-                            {% endif %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Details:</td>
-                        <td>{{ talk.details|markdown }}</td>
-                    </tr>
-                        {% if not forloop.last %}
-                        <tr>
-                            <td colspan="2"><hr /></td>
-                        </tr>
+<div class="container-fluid meeting">
+    <div class="row-fluid">
+        <div class="span2" style="text-align: right">Date:</div>
+        <div class="span10">
+            {{ meeting.date|date:"D d M Y \a\t fa" }}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2" style="text-align: right">Location:</div>
+        <div class="span10">
+            {% if meeting.locationurl %}
+            <a href="{{ meeting.locationurl }}">{{ meeting.location }}</a>
+            {% else %}
+            {{ meeting.location }}
+            {% endif %}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2" style="text-align: right">Details:</div>
+        <div class="span10">
+            {{ meeting.details|markdown }}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2" style="text-align: right">Talks planned:</div>
+        <div class="span10">
+            {% if meeting.talks %}
+                {% for talk in meeting.talks.all %}
+                <div class="row-fluid">
+                    <div class="span2" style="text-align: right">Speaker:</div>
+                    <div class="span10" style="text-align: left">{{ talk.name }}</div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span2" style="text-align: right">Topic:</div>
+                    <div class="span10">
+                        {% if talk.url %}
+                        <a href="{{ talk.url }}">{{ talk.topic }}</a>
+                        {% else %}
+                        {{ talk.topic }}
                         {% endif %}
-                    {% endfor %}
-                </table>
-                {% else %}
-                There are no talks planned for this meeting yet. Want to help?
-                {% endif %}
-            </td>
-        </tr>
-        {% if not short %}
-        <tr>
-            <td class="meetings_header">Meeting status:</td>
-            <td class="meetings_value">
-                {% if meeting.firm %}
-                Confirmed, hope to see you there.
-                {% else %}
-                Still tentative, need to confirm details.
-                {% endif %}
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="font-style: italic;">
-                {% if meeting.speakers_wanted %}
-                Note: We are still looking for additional speakers for this
-                meeting. Please <a href="{% url contactus %}">contact us</a>
-                if you would like to share something with us.
-                {% endif %}
-            </td>
-        </tr>
-        {% endif %}
-        <tr class="meeting_break">
-            <td colspan="2">&nbsp;</td>
-        </tr>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span2" style="text-align: right">Details:</div>
+                    <div class="span10">{{ talk.details|markdown }}</div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="row-fluid">
+            There are no talks planned for this meeting yet. Want to help?
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% if not short %}
+    <div class="row-fluid">
+        <div class="span2">Meeting status:</td>
+        <div class="span10">
+            {% if meeting.firm %}
+            Confirmed, hope to see you there.
+            {% else %}
+            Still tentative, need to confirm details.
+            {% endif %}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            {% if meeting.speakers_wanted %}
+            Note: We are still looking for additional speakers for this
+            meeting. Please <a href="{% url contactus %}">contact us</a>
+            if you would like to share something with us.
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+<div class="row-fluid">
+    &nbsp;
+</div>

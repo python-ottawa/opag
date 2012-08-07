@@ -2,68 +2,57 @@
 
 {% init_rootpath %}
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html>
     <head>
         <title>OPAG: The Ottawa Python Authors Group</title>
-        <link href="/opagmedia/styles/default.css" name="default" type="text/css" rel="stylesheet" />
         <meta name="description" content="This is a group devoted to learning, using and providing resources for the programming language Python." />
         <meta name="keywords" content="Python, Programming, Scripting Language, Open Source Software, Free Software, Unix, Computer, Ottawa, Canada" />
+        <link href="/opagmedia/styles/default.css" name="default" type="text/css" rel="stylesheet" />
+        <link href="/opagmedia/bootstrap/css/bootstrap.css" rel="stylesheet" />
     </head>
 
-    <body bgcolor="#ffffff">
-
-        <!-- Start of the page structure. -->
-        <table align="center" width="100%">
-            <tr>
-                <td colspan="5">
-                    <center>
-                        <a href="{{rootpath}}"><img border="0"
-                            src="/opagmedia/images/logo6.png" width="816"
-                            height="65" alt="Ottawa Python Author's
-                            Group"></a>
-                    </center>
-                </td>
-            </tr>
-
-
-            <!-- This is the blue line across the top. -->
-            <tr>
-                <td bgcolor="#134699" height="10" colspan="5">&nbsp;</td>
-            </tr>
-            <!-- Everything beneath the line goes here. -->
-            <tr>
-
+    <body>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <!-- the menu -->
+                <div class="span2">
                 {% left_menu %}
+                </div>
 
-                <!-- The dividing vertical line. -->
-                <td valign="top">
-                    <img src="/opagmedia/images/vline.png" />
-                </td>
-                <td valign="top">
-
+                <!-- main content -->
+                <div class="span8">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <a href="{{rootpath}}"><img border="0"
+                                src="/opagmedia/images/logo6.png" width="816"
+                                height="65" alt="Ottawa Python Author's
+                                Group"></a>
+                        </div>
+                    </div>
                     <!-- The navigational bar, showing current location. -->
-                    <h6>Current Location: {{ bctrail|safe }}</h6>
+                    <div class="row-fluid">
+                        <h6>Current Location: {{ bctrail|safe }}</h6>
+                    </div>
+                    <div class="container-fluid">
+                        <!-- Put the page content here. -->
+                        {% block content %}
+                        Under construction.
+                        {% endblock %}
+                    </div>
 
-                    <!-- Put the page content here. -->
-                    {% block content %}
-                    Under construction.
-                    {% endblock %}
-
-                    <!-- common footer -->
                     <hr />
-                    <p style="text-align: right;">
+                    <div class="footer">
                         Copyright &copy; OPAG 2010
-                    </p>
-                </td>
-                <!-- The dividing vertical line. -->
-                <td valign="top">
-                    <img src="/opagmedia/images/vline.png" width="14" height="490" />
-                </td>
+                    </div>
+                </div>
 
+                <!-- right menu -->
+                <div class="span2">
                 {% right_menu %}
+                </div>
+            </div>
+        </div>
 
-            </tr>
-        </table>
     </body>
 </html>

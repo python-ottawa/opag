@@ -1,42 +1,34 @@
 body {
-    font-family: arial, verdana, sans-serif;
     color: black;
     background: white;
-    font-size: 0.9em;
+    padding: 1%;
 }
 
 h1 {
-    font-size: 1.5em;
     color: navy
 }
 
 h2 {
-    font-size: 1.4em;
     color: navy
 }
 
 h3 {
-    font-size: 1.3em;
     color: navy
 }
 
 h4 {
-    font-size: 1.2em;
     color: navy
 }
 
 h5 {
-    font-size: 1.1em;
     color: navy
 }
 
 h6 {
-    font-size: 1.0em;
     color: navy
 }
 
 .h6vspaced {
-    font-size: 1.0em;
     font-weight: bold;
     color: navy;
     line-height: 30px
@@ -94,4 +86,25 @@ a:visited {
 
 table.notice_table tr td {
     color: red;
+}
+
+.container-fluid {
+    padding: 1%;
+}
+
+.meeting {
+    background: whitesmoke;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 15px;
+    /* From
+     * http://robertnyman.com/2010/03/16/drop-shadow-with-css-for-all-web-browsers/
+     */
+    -moz-box-shadow: 3px 3px 4px #000;
+    -webkit-box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px #000;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }

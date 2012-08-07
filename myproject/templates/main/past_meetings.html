@@ -7,41 +7,41 @@ meetings page. -->
 
 {% block content %}
 
-<p><img src="/opagmedia/images/s.png" width="31" height="29" valign="center"
-alt="S" />hown here are the previous OPAG meeting details. If speakers
-provided links to any resources from their talks, then they are located
-here.</p>
+<div class="row-fluid">
+    <p>
+        <img src="/opagmedia/images/s.png" width="31" height="29"
+        valign="center" alt="S" />hown here are the previous OPAG meeting
+        details. If speakers provided links to any resources from their talks,
+        then they are located here.
+    </p>
+</div>
 
-<!-- FIXME: We really need pagination here -->
-
-<h2>Past Meetings</h2>
-<table class="meetings_table">
+<div class="row-fluid">
+    <h2>Past Meetings</h2>
+</div>
 {% if meetings %}
     {% for meeting in meetings %}
         {% render_meeting meeting "1" %}
     {% endfor %}
 {% else %}
-    <tr>
-        <td>
-            There are no past meetings saved.
-        </td>
-    </tr>
+    <div class="alert alert-warning">
+    There are no past meetings saved.
+    </div>
 {% endif %}
-<tr>
-    <td style="text-align: left;">
+<div class="row-fluid">
+    <div class="span6">
         {% if page.has_previous %}
         <a href="{% url past-meetings-page page.previous_page_number %}">Newer meetings</a>
         {% else %}
         &nbsp;
         {% endif %}
-    </td>
-    <td style="text-align: right;">
+    </div>
+    <div class="span6">
         {% if page.has_next %}
         <a href="{% url past-meetings-page page.next_page_number %}">Older meetings</a>
         {% else %}
         &nbsp;
         {% endif %}
-    </td>
-</tr>
-</table>
+    </div>
+</div>
 {% endblock %}
