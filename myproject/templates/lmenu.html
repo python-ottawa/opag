@@ -16,17 +16,14 @@
     <br />
 
     {% for section in menu %}
-    <img src="/opagmedia/images/{{ section.image }}"
-         alt="{{ section.title }}" /><br /><br />
-    <table>
+    <div class="section-title">{{ section.title }}</div>
+    <ul>
         {% for item in section.data %}
-        <tr valign="center">
-            <td>
-                <span class="label label-info"><a href="{{ item.link }}">{{ item.title }}</a></span>
-            </td>
-        </tr>
+        <li>
+            <a href="{{ item.link }}">{{ item.title }}</a>
+        </li>
         {% endfor %}
-    </table>
+    </ul>
     <br />
     {% endfor %}
 </td>

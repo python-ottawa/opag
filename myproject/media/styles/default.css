@@ -116,3 +116,11 @@ table.notice_table tr td {
     /* For IE 5.5 - 7 */
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
+
+.section-title {
+    padding: 10px;
+    background: navy;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}

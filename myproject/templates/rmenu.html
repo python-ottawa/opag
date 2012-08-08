@@ -18,18 +18,17 @@
     <br />
 
 
-    <img src="/opagmedia/images/quick_links.png" width="150" height="40" alt="Quick Links" />
-    <br clear="all" />
+    <div class="section-title">Quick links</div>
     <table>
         {% for item in quicklinks %}
-        <tr valign="center">
-            <td>
-                <span class="label label-info"><a href="{{ item.link }}">{{ item.title }}</a></span>
-            </td>
-        </tr>
+        <ul>
+            <li>
+                <a href="{{ item.link }}">{{ item.title }}</a>
+            </li>
+        </ul>
         {% endfor %}
     </table>
     <br />
-    <span class="label label-important"><a href="{{rootpath}}admin/">Admin</a></span>
+    <a href="{{rootpath}}admin/">Admin</a>
     </p>
 </td>
