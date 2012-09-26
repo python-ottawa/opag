@@ -40,10 +40,10 @@ ADMIN_MEDIA_PREFIX = '/opagmedia/admin/'
 SECRET_KEY = '8vS4MNWy674VJidmPg6UAf50niO7Kr6Gqvuz2bWRfUaJZz5SQUTQGdegzVpIXJQ'
 
 # Your project root
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__) + "../../../")
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/opagmedia/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'

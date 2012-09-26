@@ -1,7 +1,6 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.conf import settings
-import os
 
 admin.autodiscover()
 
@@ -19,7 +18,7 @@ if settings.DEVELOPMENT:
         # To serve static content in development.
         (r'^opagmedia/(?P<path>.*)$',
             'django.views.static.serve',
-            { 'document_root': os.environ['HOME'] + '/work/opag/myproject/media' }),
+            {'document_root': settings.MEDIA_ROOT}),
     )
 
 handler404 = 'myproject.main.views.notfound'
