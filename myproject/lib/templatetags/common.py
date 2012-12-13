@@ -66,6 +66,10 @@ def right_menu(context):
             'link': 'http://digitaltorque.ca/'
         },
         {
+            'title': "Mike Soulier's Blog",
+            'link': 'http://www.but-i-digress.ca/'
+        },
+        {
             'title': "Ian Ward's Homepage",
             'link': 'http://excess.org/'
         }
