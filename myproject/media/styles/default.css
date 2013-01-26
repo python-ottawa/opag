@@ -124,3 +124,9 @@ table.notice_table tr td {
     border-radius: 5px;
     margin-bottom: 5px;
 }
+
+.need-to-know {
+    font-size:  1.3em;
+    color: navy;
+}
+
