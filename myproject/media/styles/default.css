@@ -45,7 +45,7 @@ h6 {
 a:link {
     color: navy
 }
- 
+
 a:visited {
     color: navy
 }
@@ -126,7 +126,8 @@ table.notice_table tr td {
 }
 
 .need-to-know {
-    font-size:  1.3em;
+    font-size:  1.2em;
+    font-style: italic;
     color: navy;
 }
 
