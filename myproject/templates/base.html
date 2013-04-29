@@ -6,49 +6,72 @@
 <html>
     <head>
         <title>Ottawa Python Authors Group</title>
-        <meta name="description" content="This is a group devoted to learning, using and providing resources for the programming language Python." />
-        <meta name="keywords" content="Python, Programming, Scripting Language, Open Source Software, Free Software, Unix, Computer, Ottawa, Canada" />
-        <link href="/opagmedia/styles/default.css" name="default" type="text/css" rel="stylesheet" />
-        <link href="/opagmedia/bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <link href="/static/styles/default.css" rel="stylesheet" />
     </head>
 
     <body>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <!-- the menu -->
-                <div class="span2">
-                {% left_menu %}
-                </div>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+            <div class="container" style="width: auto;">
+                <a href = "/" class="brand" style="padding-left: 100px">The Ottawa Python Author's Group</a>
+                <ul class="nav" role="navigation">
 
+                <!-- Club info menu -->
+                <li class="dropdown">
+                    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Club Information <b class="caret"></b></a>
+
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/">About the group</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/aboutsite/">About the website</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/financials/">Financials</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/contactus/">Contact Us</a></li>
+                    </ul>
+
+                </li>
+
+                <!-- Quick links menu -->
+                <li class="dropdown">
+                    <a href="#" id="drop2" role="button"
+                    class="dropdown-toggle" data-toggle="dropdown">Quick Links <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/pages/settings/global/">The Python Homepage</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://digitaltorque.ca">Digitaltorque Consulting Inc.</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://boxkite.ca/">Boxkite</a></li>
+                    </ul>
+                </li>
+
+                <!-- Blogroll menu -->
+                <li class="dropdown">
+                    <a href="#" id="drop2" role="button"
+                    class="dropdown-toggle" data-toggle="dropdown">Blogroll <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.but-i-digress.com">Michael Soulier's blog</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://excess.org">Ian Ward's blog</a></li>
+                    </ul>
+                </li>
+
+            </div>
+            </div>
+        </div> <!-- /navbar-->
+        
+        <div class="container">
+            <div class="row">
                 <!-- main content -->
+                <div class="span2">&nbsp;</div>
                 <div class="span8">
-                    <div class="row-fluid">
-                        <div class="span12">
-                            <a href="{{rootpath}}"><img border="0"
-                                src="/opagmedia/images/logo6.png" width="816"
-                                height="65" alt="Ottawa Python Author's
-                                Group"></a>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <!-- Put the page content here. -->
-                        {% block content %}
-                        Under construction.
-                        {% endblock %}
-                    </div>
-
-                    <hr />
-                    <div class="footer">
-                        Copyright &copy; OPAG 2012
-                    </div>
+                    <!-- Put the page content here. -->
+                    {% block content %}
+                    Under construction.
+                    {% endblock %}
                 </div>
-
-                <!-- right menu -->
-                <div class="span2">
-                {% right_menu %}
-                </div>
+                <div class="span2">&nbsp;</div>
+            </div>
+            <div class="row">
+                Copyright &copy; OPAG 2012
             </div>
         </div>
-
+        <script src="/static/js/jquery-1.9.1.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>

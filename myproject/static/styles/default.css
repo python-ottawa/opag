@@ -1,58 +1,5 @@
 body {
-    color: black;
-    background: white;
-    padding: 1%;
-}
-
-h1 {
-    color: navy
-}
-
-h2 {
-    color: navy
-}
-
-h3 {
-    color: navy
-}
-
-h4 {
-    color: navy
-}
-
-h5 {
-    color: navy
-}
-
-h6 {
-    color: navy
-}
-
-.h6vspaced {
-    font-weight: bold;
-    color: navy;
-    line-height: 30px
-}
-
-.label a:link {
-    color: white;
-}
-
-.label a:visited {
-    color: white;
-}
-
-a:link {
-    color: navy
-}
-
-a:visited {
-    color: navy
-}
-
-.small {
-    font-size: 0.8em;
-    color: #333333;
+    padding-top: 60px;
 }
 
 .meetings_table {
@@ -94,10 +41,6 @@ a:visited {
 
 table.notice_table tr td {
     color: red;
-}
-
-.container-fluid {
-    padding: 1%;
 }
 
 .meeting {

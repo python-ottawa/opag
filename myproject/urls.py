@@ -16,9 +16,9 @@ if settings.DEVELOPMENT:
     # If in development mode
     urlpatterns += patterns('',
         # To serve static content in development.
-        (r'^opagmedia/(?P<path>.*)$',
+        (r'^static/(?P<path>.*)$',
             'django.views.static.serve',
-            {'document_root': settings.MEDIA_ROOT}),
+            {'document_root': settings.STATIC_ROOT}),
     )
 
 handler404 = 'myproject.main.views.notfound'

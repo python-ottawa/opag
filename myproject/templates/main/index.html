@@ -3,11 +3,12 @@
 {% load main_extras %}
 
 {% block content %}
-    <div class="row-fluid">
-    <p>
-        <img src="/opagmedia/images/w.png" width="33" height="23" valign="center"
-        alt="W" />elcome to the home of the Ottawa Python Authors Group!
-    </p>
+    <div class="row">
+        <div class="container">
+            <p>
+                Welcome to the home of the Ottawa Python Authors Group!
+            </p>
+        </div>
     </div>
     {% if notices %}
         {% for notice in notices %}
@@ -23,7 +24,7 @@
             {% endif %}
         {% endfor %}
     {% endif %}
-    <div class="row-fluid">
+    <div class="row">
         <h2>Upcoming Meetings</h2>
     </div>
     {% if meetings %}
@@ -31,7 +32,7 @@
             {% render_meeting meeting %}
         {% endfor %}
     {% else %}
-    <div class="row-fluid">
+    <div class="row">
         <div class="alert alert-info">
         <h4 class="alert-heading">
         Awkward!
@@ -42,9 +43,7 @@
     </div>
     {% endif %}
     <div class="row">
-        <div class="span12">
             <h5><a href="{% url past-meetings %}">Past meetings</a></h5>
-        </div>
     </div>
     <a class="twitter-timeline"  href="https://twitter.com/PythonOttawa"
     data-widget-id="328644952923967490">Tweets by @PythonOttawa</a>
